@@ -7,8 +7,8 @@ const ctx = canvas.getContext("2d");
 
 // Minibrot: scale 11811.06559786763 camX -1.75488
 const unit = 200;
-const scale = 200;
-const camX = 0;
+const scale = 11811.06559786763;
+const camX = -1.75488;
 const camY = 0;
 const max_iter = 1000;
 const n = 2;
@@ -29,11 +29,11 @@ worker.addEventListener("message", e => {
         ctx.fillRect(x, y, 1, 1);
     } else if (col !== -1) {
         // Blue to reddish-yellow
-        // ctx.fillStyle = `rgb(${255 - 255 * Math.exp(-col / 20)}, ${192 - 192 * Math.exp(-col / 20)}, ${128 * Math.exp(-col / 20)})`;
+        ctx.fillStyle = `rgb(${255 - 255 * Math.exp(-col / 20)}, ${192 - 192 * Math.exp(-col / 20)}, ${128 * Math.exp(-col / 20)})`;
         // Rainbow
         // ctx.fillStyle = `hsl(${col * 10}, 100%, 50%)`;
         // Wikipedia
-        ctx.fillStyle = wikipedia[(col + 1) % 16];
+        // ctx.fillStyle = wikipedia[(col + 1) % 16];
         ctx.fillRect(x, y, 1, 1);
     }
 });
