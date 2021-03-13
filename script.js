@@ -6,11 +6,11 @@ const ctx = canvas.getContext("2d");
 
 
 // Minibrot: scale 11811.06559786763 camX -1.75488
-const unit = 500;
-const scale = 500;
+const unit = 200;
+const scale = 200;
 const camX = 0;
 const camY = 0;
-const max_iter = 2000;
+const max_iter = 1000;
 const n = 2;
 const wikipedia = ["#421e0f", "#19071a", "#09012f", "#040449", "#000764", "#0c2c8a", "#1852b1", "#397dd1", "#86b5e5", "#d3ecf8", "#f1e9bf", "#f8c95f", "#ffaa00", "#cc8000", "#995700", "#6a3403"];
 
