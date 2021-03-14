@@ -13,7 +13,7 @@ const scale = parseFloat(SearchParams.get("scale")) || 200;
 const camX = parseFloat(SearchParams.get("camX")) || 0;
 const camY = parseFloat(SearchParams.get("camY")) || 0;
 const max_iter = parseFloat(SearchParams.get("maxIter")) || 1000;
-const n = parseFloat(SearchParams.get("power")) || 2;
+const n = parseFloat(SearchParams.get("n")) || 2;
 const wikipedia = ["#421e0f", "#19071a", "#09012f", "#040449", "#000764", "#0c2c8a", "#1852b1", "#397dd1", "#86b5e5", "#d3ecf8", "#f1e9bf", "#f8c95f", "#ffaa00", "#cc8000", "#995700", "#6a3403"];
 
 canvas.width = 4 * unit;
