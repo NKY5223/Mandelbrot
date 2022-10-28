@@ -13,10 +13,10 @@ const settings = {
     top: 2,
     right: 2,
     bottom: -2,
-    resx: 1000,
-    resy: 1000,
-    max_iter: 500,
-    palette: palettes.wikipedia,
+    resx: 4000,
+    resy: 4000,
+    max_iter: 1000
+    palette: palettes.blueyellow,
 };
 
 render();
