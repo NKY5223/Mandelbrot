@@ -15,7 +15,7 @@ const settings = {
     bottom: -2,
     resx: 4000,
     resy: 4000,
-    max_iter: 1000
+    max_iter: 1000,
     palette: palettes.blueyellow,
 };
 
