@@ -19,6 +19,8 @@ const settings = {
     palette: palettes.wikipedia,
 };
 
+render();
+
 function render() {
     canvas.width = settings.resx;
     canvas.height = settings.resy;
