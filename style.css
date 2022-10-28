@@ -5,6 +5,8 @@ body {
     height: 100%;
     margin: 0;
     background: #202020;
+    display: grid;
+    place-items: center;
 }
 canvas {
     background: #000000;
