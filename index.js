@@ -8,29 +8,30 @@ const palettes = {
     blueYellow: i => i === -1 ? [0, 0, 0] : (i = Math.exp(-i / 20), [255 - 255 * i, 192 - 192 * i, 128 * i])
 };
 
-// render vars
-let left = -2;
-let top = 3;
-let right = 2;
-let bottom = -2;
-let resx = 100;
-let resy = 125;
-let max_iter = 10;
-let palette = palettes.blueYellow;
+const settings = {
+    left: -2,
+    top: 3,
+    right: 2,
+    bottom: -2,
+    resx: 100,
+    resy: 125,
+    max_iter: 10,
+    palette: palettes.blueYellow,
+};
 
 function render() {
     canvas.width = resx;
     canvas.height = resy;
-    let w = right - left;
-    let h = bottom - top;
+    let w = settings.right - settings.left;
+    let h = settings.bottom - settings.top;
     const data = [];
-    for (let y = 0; y < resy; y++) for (let x = 0; x < resx; x++) data.push(...palette(mandelbrot(left + w * x / resx, top + h * y / resy)), 1);
+    for (let y = 0; y < resy; y++) for (let x = 0; x < resx; x++) data.push(...palette(mandelbrot(settings.left + w * x / resx, settings.top + h * y / resy)), 1);
     ctx.putImageData(new ImageData(data, resx, resy), 0, 0);
 }
 function mandelbrot(cr, ci) {
     let zr = 0;
     let zi = 0;
-    for (let i = 0; i < max_iter; i++) {
+    for (let i = 0; i < settings.max_iter; i++) {
         [zr, zi] = [zr * zr - zi * zi + cr, 2 * zr * zi + ci];
         if (zr < -2 || zr > 2 || zi < -2 || zi > 2 || zr * zr + zi * zi > 4) return i;
     }
