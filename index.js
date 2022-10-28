@@ -25,8 +25,8 @@ function render() {
     let w = settings.right - settings.left;
     let h = settings.bottom - settings.top;
     const data = [];
-    for (let y = 0; y < settings.resy; y++) for (let x = 0; x < settings.resx; x++) data.push(...settings.palette(mandelbrot(settings.left + w * x / settings.resx, settings.top + h * y / settings.resy)), 1);
-    ctx.putImageData(new ImageData(data, settings.resx, settings.resy), 0, 0);
+    for (let y = 0; y < settings.resy; y++) for (let x = 0; x < settings.resx; x++) data.push(...settings.palette(mandelbrot(settings.left + w * x / settings.resx, settings.top + h * y / settings.resy)), 255);
+    ctx.putImageData(new ImageData(data, settings.resx), 0, 0);
 }
 function mandelbrot(cr, ci) {
     let zr = 0;
