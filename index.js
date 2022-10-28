@@ -10,13 +10,13 @@ const palettes = {
 
 const settings = {
     left: -2,
-    top: 3,
+    top: 2,
     right: 2,
     bottom: -2,
-    resx: 100,
-    resy: 125,
-    max_iter: 10,
-    palette: palettes.blueYellow,
+    resx: 1000,
+    resy: 1000,
+    max_iter: 500,
+    palette: palettes.wikipedia,
 };
 
 function render() {
